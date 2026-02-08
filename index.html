@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpe Lucem | Production Audiovisuelle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header will be injected here -->
+    <div id="header-placeholder"></div>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <div class="text-col">
+                <span class="surtitre">Production audiovisuelle</span>
+                <h1>Carpe Lucem</h1>
+                <p class="hero-description">Fondée en 2022 par Mélanie Bayart, Carpe Lucem est une maison de production
+                    qui cueille la lumière de vos projets pour émerveiller petits et grands.</p>
+                <p class="baseline italic">"Des récits qui rayonnent, des chansons qui résonnent."</p>
+
+            </div>
+            <div class="image-col">
+                <div> <!-- Wrapper for image -->
+                    <div class="bancale-frame">
+                        <img src="assets/img/photo-mel.png" alt="Mélanie, fondatrice de Carpe Lucem">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="realisations">
+        <div class="container">
+            <h2 class="section-title">Nos dernières réalisations</h2>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <div class="project-text">
+                        <h3>Le Livre Musical <span class="highlight-title">Féheyenna</span></h3>
+                        <p>Sur Féheyenna, un monde aux ciels roses et aux sols orangés, la Montagne
+                            Sacrée se meurt...</p>
+                        <p>Pour la sauver, trois jeunes Féés vont tenter l'impossible : briser le silence entre les
+                            mondes
+                            et appeler à l'aide une petite Terrienne. Plongez dans <strong>Le Secret de
+                                Féheyenna</strong>,
+                            un conte musical vibrant où l'amitié traverse les galaxies pour réveiller les consciences et
+                            guérir la nature.</p>
+                    </div>
+
+                    <div class="audio-player">
+                        <p class="audio-header">🎧 Écouter des extraits :</p>
+
+                        <div class="track">
+                            <p class="track-title">Le Mystère de la Rivière</p>
+                            <div class="custom-audio-player" data-src="assets/audio/chap-6_0000-0050.mp3">
+                                <button class="play-btn">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M8 5v14l11-7z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <div class="progress-container">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+
+                        <div class="track">
+                            <p class="track-title">La Berceuse des Étoiles</p>
+                            <div class="custom-audio-player" data-src="assets/audio/chap-7_0524-0649..mp3">
+                                <button class="play-btn">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M8 5v14l11-7z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <div class="progress-container">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+
+                        <div class="track">
+                            <p class="track-title">Si on était ci, si on était ça</p>
+                            <div class="custom-audio-player" data-src="assets/audio/chap-5_1023-1057.mp3">
+                                <button class="play-btn">
+                                    <svg viewBox="0 0 24 24" width="24" height="24">
+                                        <path d="M8 5v14l11-7z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <div class="progress-container">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <span class="time-display">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-visual">
+                    <div class="book-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Créons ensemble</h2>
+            <div class="contact-wrapper">
+                <p>Pour une collaboration, une demande d'information ou simplement nous saluer.</p>
+
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"
+                                autocomplete="given-name" required>
+                        </div>
+                        <span class="ou-separator">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre nom" autocomplete="family-name"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-row with-separator">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com"
+                                autocomplete="email">
+                        </div>
+                        <span class="ou-separator">OU</span>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00"
+                                autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                    </div>
+                    <!-- Disabled by default, enabled via JS -->
+                    <button type="submit" class="btn-submit" disabled>Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Carpe Lucem. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
