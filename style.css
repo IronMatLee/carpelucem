@@ -108,6 +108,39 @@ nav a.active::after {
     color: var(--white);
 }
 
+/* BURGER MENU */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--gold-color);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+
 /* HERO SECTION */
 #hero {
     padding: 40px 0;
@@ -487,7 +520,6 @@ footer {
 /* RESPONSIVE (Mobile) */
 @media (max-width: 768px) {
 
-    .header-container,
     .hero-content,
     .project-card,
     .project-info {
@@ -499,11 +531,6 @@ footer {
         width: 280px;
         height: 350px;
         margin-top: 30px;
-    }
-
-    nav ul {
-        display: none;
-        /* À remplacer par un menu burger plus tard */
     }
 }
 
@@ -592,5 +619,58 @@ footer {
         transform: none;
         margin: -10px 0;
         align-self: center;
+    }
+}
+
+/* Mobile menu and contact form */
+@media (max-width: 600px) {
+
+    /* Keep header layout horizontal */
+    .header-container {
+        flex-direction: row !important;
+        justify-content: space-between;
+        text-align: left !important;
+    }
+
+    /* Add padding to all containers on mobile */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Adjust hero content for mobile */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Show burger menu, hide nav by default */
+    .burger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Reduce contact form padding on mobile */
+    .contact-wrapper {
+        padding: 10px;
     }
 }
